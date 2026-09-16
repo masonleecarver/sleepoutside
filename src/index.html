@@ -67,7 +67,7 @@
           <template id="product-card-template">
             <li class="product-card">
               <a href="#">
-                <img src="" alt="" loading="lazy">
+                <img src="" alt="" loading="lazy" />
                 <h3 class="card__brand"></h3>
                 <h2 class="card__name"></h2>
                 <p class="product-card__price"></p>
@@ -76,6 +76,28 @@
           </template>
         </ul>
       </section>
+
+      <button id="openNews">
+        <p>Subscribe to our Newsletter!</p>
+      </button>
+
+      <dialog id="newsletter-dialouge">
+        <form>
+          <p>Get the latest news and updates from Sleep Outside.</p>
+
+          <label for="name"
+            >Name: <input type="text" id="name" name="name" required />
+          </label>
+          <label for="email"
+            >Email: <input type="email" id="email" name="email" required
+          /></label>
+
+          <div>
+            <button type="submit" id="subscribeNews">Subscribe</button>
+            <button type="button" id="closeNews">Nevermind</button>
+          </div>
+        </form>
+      </dialog>
     </main>
     <footer>
       &copy;2025 ⛺ SleepOutside ⛺ WDD 330 ⛺ BYU-Idaho for BYU-Pathway
