@@ -1,19 +1,22 @@
 import { getLocalStorage, loadHeaderFooter, setLocalStorage } from "./utils.mjs";
 
+const productList = document.querySelector(".product-list");
 
 loadHeaderFooter();
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
-  const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+  
   const noItems = document.getElementById("no-items");
   if (cartItems.length != 0) {
     noItems.hidden = true;
+    const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+    productList.innerHTML = htmlItems.join("");
   } else {
     noItems.hidden = false;
   }
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
+  
 
 
 
@@ -39,8 +42,6 @@ function cartItemTemplate(item) {
 }
 
 renderCartContents();
-
-const productList = document.querySelector(".product-list");
 
 productList.addEventListener("click", (event) => {
   if (!event.target.classList.contains("cart-card__remove")) {
