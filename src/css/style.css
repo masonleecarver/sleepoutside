@@ -266,6 +266,14 @@ button {
   grid-column: 3;
 }
 
+.cart-card__remove {
+  grid-row: 1;
+  grid-column: 3;
+  text-align: right;
+  color: red;
+  cursor: pointer;
+}
+
 /* newsletter styles */
 
 #openNews {
