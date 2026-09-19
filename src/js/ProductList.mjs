@@ -7,8 +7,8 @@ function populateList(list, listElement) {
         const clone = template.content.cloneNode(true);
         const [a, img, h3, h2, p] = clone.querySelectorAll("a, img, h3, h2, p");
 
-        a.href = `product_pages/?product=${element.Id}`;
-        img.src = element.Image;
+        a.href = `/product_pages/?product=${element.Id}`;
+        img.src = element.Images.PrimaryMedium;
         img.alt = `Image of a ${element.Name}`;
         h3.textContent = element.Brand.Name;
         h2.textContent = element.NameWithoutBrand;
@@ -27,7 +27,7 @@ export default class ProductList {
     } 
 
     async init() {
-        const list = await this.dataSource.getData();
+        const list = await this.dataSource.getData(this.category);
         populateList(list, this.listElement);
     }
 }
