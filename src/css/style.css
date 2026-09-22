@@ -345,10 +345,13 @@ button {
 
 /* checkout styles */
 
-.checkout-form {
+.checkout-form 
+
+form {
   display: block;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 75vw;
+  padding: 15px;
 
   fieldset {
     display: flex;
@@ -365,6 +368,9 @@ button {
       margin: 10px;
     }
 
+    label {
+      display: block;
+    }
     input {
       padding: 10px;
       margin-bottom: 10px;
@@ -379,8 +385,8 @@ button {
       }
     }
 
-    label {
-      font-family: var(--font-body);
+    .order__summary div {
+      margin: 5px;
     }
 
   }
