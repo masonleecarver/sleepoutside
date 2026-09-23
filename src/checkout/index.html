@@ -24,33 +24,36 @@
         <input type="hidden" name="orderDate" id="orderDate">
 
         <fieldset>
-          <legend>Personal Info</legend>
+          <legend>Name</legend>
           <div class="checkout__name">
-            <label for="fname">First Name: <input type="text" name="fname" id="fname" required></label>
-            <label for="lname">Last Name: <input type="text" name="lname" id="lname" required></label>
+            <label for="fname">First: <input type="text" name="fname" id="fname" required></label>
+            <label for="lname">Last: <input type="text" name="lname" id="lname" required></label>
             
           </div>
+          
+        </fieldset>
+
+        <fieldset>
+          <legend>Address</legend>
           <div class="checkout__address">
-            <label for="street">Street Address: <input type="text" name="street" id="street" required></label>
+              <label for="street">Street Address: <input type="text" name="street" id="street" required></label>
             
-            <label for="city">City: <input type="text" name="city" id="city" required></label>
+              <label for="city">City: <input type="text" name="city" id="city" required></label>
             
-            <label for="state">State: <input type="text" name="state" id="state" required></label>
+              <label for="state">State: <input type="text" name="state" id="state" required></label>
             
-            <label for="zip">Zip: <input type="text" name="zip" id="zip" required></label>
-            
+              <label for="zip">Zip: <input inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" name="zip" id="zip" required></label>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Payment</legend>
           <div class="checkout__payment">
-            <label for="cardNumber">Card Number: <input type="text" name="cardNumber" id="cardNumber" required></label>
+              <label for="cardNumber">Card Number: <input inputmode="numeric" name="cardNumber" id="cardNumber" autocomplete="cc-number" required></label>
             
-            <label for="expiration">Expiration: <input type="text" name="expiration" id="expiration" required></label>
-            
-            <label for="code">CVV: <input type="text" name="code" id="code" required></label>
-            
+              <label for="expiration">Expiration: <input placeholder="MM/YY" name="expiration" id="expiration" autocomplete="cc-exp" required></label>
+
+              <label for="code">CVV: <input inputmode="numeric" name="code" id="code" autocomplete="cc-csc" required></label>
           </div>
         </fieldset>
 
@@ -60,7 +63,7 @@
           <div class="order__summary">
             <div>Items: <span id="num-items"></span></div>
             <div>Subtotal: <span id="cartTotal"></span></div>
-            <div>Tax <span id="tax"></span></div>
+            <div>Tax: <span id="tax"></span></div>
             <div>Shipping: <span id="shipping"></span></div>
             <div>Total: <span id="orderTotal"></span></div>
           </div>

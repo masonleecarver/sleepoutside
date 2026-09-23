@@ -3,7 +3,6 @@ const template = document.getElementById("product-card-template");
 function populateList(list, listElement) {
 
     list.forEach((element) => {
-        console.log(element);
         const clone = template.content.cloneNode(true);
         const [a, img, h3, h2, p] = clone.querySelectorAll("a, img, h3, h2, p");
 
