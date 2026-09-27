@@ -1,6 +1,7 @@
 import ExternalServices from "./ExternalServices.mjs";
 import ProductList from "./ProductList.mjs";
 import "./newsletter.js";
+import "./sign-up-banner.js";
 import { loadHeaderFooter } from "./utils.mjs";
 
 loadHeaderFooter();
